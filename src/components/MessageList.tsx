@@ -1,4 +1,5 @@
 import React from "react";
+import Message from "./Message";
 
 interface Props {
   messages: string[]
@@ -9,7 +10,7 @@ const MessageList = ({ messages }: Props) => {
     <div className="flex-grow-1 d-flex flex-column-reverse bg-secondary-subtle p-3">
       <div className="d-flex flex-column">
         {messages.map(text => (
-          <p className="bg-white align-self-end p-1 rounded">{text}</p>
+          <Message>{text}</Message>
         ))}
       </div>
     </div>
