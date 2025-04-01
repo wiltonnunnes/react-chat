@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import MessageInput from './components/MessageInput';
 import MessageList from './components/MessageList';
+import { ChatServerConnection } from './utils/ChatServerConnection';
 
 const App: React.FC = () => {
   const [messages, setMessages] = useState<string[]>([]);
 
-  let webSocket = new WebSocket("http://127.0.0.1:80");
+  let connection = ChatServerConnection.getInstance();
+  connection.start();
 
   return (
     <div className="container d-flex flex-column vh-100 p-3">
