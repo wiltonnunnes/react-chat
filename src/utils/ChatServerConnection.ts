@@ -17,7 +17,7 @@ export class ChatServerConnection {
   }
 
   public start(): void {
-    this.webSocket = new WebSocket("http://127.0.0.1:80");
+    this.webSocket = new WebSocket("http://127.0.0.1:81");
   }
 
   public write(msg: string): void {
